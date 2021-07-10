@@ -20,12 +20,21 @@ public class Cart {
 		this.cartItems = cartItems;
 	}
 	
-	public void addCartItems(CartItem item ) {
+	public void addCartItem(CartItem item ) {
 		//initilise the cart 
 		if(cartItems == null ) {
 			cartItems =  new ArrayList<CartItem>();
 		}
 		cartItems.add(item);
+	}
+	
+	public CartItem getCartItemByProductName(String productName) {
+		for(CartItem item : cartItems) {
+			if(item.getProduct().getName().contentEquals(productName)) {
+				return item;
+			}
+		}
+		return null;
 	}
 	
 	//Can util method to remove the cartitem 

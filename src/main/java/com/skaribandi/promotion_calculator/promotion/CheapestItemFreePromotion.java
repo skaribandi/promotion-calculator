@@ -1,4 +1,7 @@
 package com.skaribandi.promotion_calculator.promotion;
+
+import com.skaribandi.promotion_calculator.model.Cart;
+
 /**
  * 
  * @author skaribandi
@@ -7,7 +10,7 @@ package com.skaribandi.promotion_calculator.promotion;
  */
 public class CheapestItemFreePromotion implements Promotion{
 	
-	public double apply() {
+	public double apply(Cart cart) {
 		return 0;
 	}
 
