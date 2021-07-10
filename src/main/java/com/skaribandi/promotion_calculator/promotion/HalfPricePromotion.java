@@ -1,5 +1,7 @@
 package com.skaribandi.promotion_calculator.promotion;
 
+import java.util.List;
+
 import com.skaribandi.promotion_calculator.model.Cart;
 import com.skaribandi.promotion_calculator.model.CartItem;
 
@@ -11,7 +13,7 @@ import com.skaribandi.promotion_calculator.model.CartItem;
  */
 public class HalfPricePromotion implements Promotion{
 	
-	public double apply(Cart cart) {
+	public double apply(Cart cart, List<String> discountedProdcts) {
 		//Does cart has Product A & B 
 		// If Yes for Each of product of A the price of Product will be half 
 		double  totalPrice =0;

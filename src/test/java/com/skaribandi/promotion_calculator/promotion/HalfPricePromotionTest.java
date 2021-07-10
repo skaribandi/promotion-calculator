@@ -2,6 +2,9 @@ package com.skaribandi.promotion_calculator.promotion;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.skaribandi.promotion_calculator.model.Cart;
 import com.skaribandi.promotion_calculator.model.CartItem;
 import com.skaribandi.promotion_calculator.model.Product;
@@ -27,7 +30,11 @@ public class HalfPricePromotionTest extends TestCase {
 	  cartItemB.setProduct(productB);
 	  cartItemB.setQuantity(2);
 	  
-	  double totalAmount = halfPricePromotion.apply(cart);
+	  List<String> discountedProducts = new ArrayList<String>();
+	  //We cab add hasDiscount field to the Product
+	  discountedProducts.add("B");
+	  
+	  double totalAmount = halfPricePromotion.apply(cart , discountedProducts);
 	  assertEquals(23.5, totalAmount);
   }
 }
